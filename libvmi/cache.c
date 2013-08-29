@@ -644,8 +644,13 @@ sym_cache_destroy(
 status_t
 sym_cache_get(
     vmi_instance_t vmi,
+<<<<<<< HEAD
     addr_t base_addr,
     vmi_pid_t pid,
+=======
+    addr_t base_addr, 
+    uint32_t pid,
+>>>>>>> 2b62bea... Fixed broken cache compilation due to incompatible stubs
     char *sym,
     addr_t *va)
 {
@@ -655,8 +660,13 @@ sym_cache_get(
 void
 sym_cache_set(
     vmi_instance_t vmi,
+<<<<<<< HEAD
     addr_t base_addr,
     vmi_pid_t pid,
+=======
+    addr_t base_addr, 
+    uint32_t pid,
+>>>>>>> 2b62bea... Fixed broken cache compilation due to incompatible stubs
     char *sym,
     addr_t va)
 {
@@ -666,8 +676,13 @@ sym_cache_set(
 status_t
 sym_cache_del(
     vmi_instance_t vmi,
+<<<<<<< HEAD
     addr_t bade_addr,
     vmi_pid_t pid,
+=======
+    addr_t base_addr,
+    uint32_t pid,
+>>>>>>> 2b62bea... Fixed broken cache compilation due to incompatible stubs
     char *sym)
 {
     return VMI_FAILURE;
@@ -697,8 +712,10 @@ rva_cache_destroy(
 status_t
 rva_cache_get(
     vmi_instance_t vmi,
-    char *sym,
-    addr_t *va)
+    addr_t base_addr,
+    uint32_t pid,
+    addr_t rva,
+    char **sym)
 {
     return VMI_FAILURE;
 }
@@ -707,7 +724,11 @@ void
 rva_cache_set(
     vmi_instance_t vmi,
     addr_t base_addr,
+<<<<<<< HEAD
     vmi_pid_t pid,
+=======
+    uint32_t pid,
+>>>>>>> 2b62bea... Fixed broken cache compilation due to incompatible stubs
     addr_t rva,
     char *sym)
 {
@@ -717,7 +738,9 @@ rva_cache_set(
 status_t
 rva_cache_del(
     vmi_instance_t vmi,
-    char *sym)
+    addr_t base_addr,
+    uint32_t pid,
+    addr_t rva)
 {
     return VMI_FAILURE;
 }
